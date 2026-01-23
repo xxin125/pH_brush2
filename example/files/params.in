@@ -1,0 +1,78 @@
+
+
+lj_shift            = yes
+cutoff_nm           = 1.1
+coulombtype         = pme
+epsilon_r           = 15
+ewald_rtol          = 1e-5
+pme_spacing         = 0.12
+pme_order           = 4
+pme_3dc             = yes 3
+
+# Pairwise LJ parameters: type_i type_j epsilon(kJ/mol) sigma(nm)
+lj 1 1 3.39 0.47
+lj 1 2 2.53 0.43
+lj 1 3 3.24 0.47
+lj 1 4 4.337 0.43
+lj 1 5 3.24 0.47
+lj 1 6 4.577 0.43
+lj 1 7 3.07 0.47
+lj 1 8 2.42 0.465
+lj 1 9 4.24 0.404
+lj 2 2 1.25 0.421
+lj 2 3 2.16 0.43
+lj 2 4 2.089 0.453
+lj 2 5 2.32 0.43
+lj 2 6 2.26 0.421
+lj 2 7 2.92 0.43
+lj 2 8 1.42 0.437
+lj 2 9 1.233 0.588
+lj 3 3 2.24 0.485
+lj 3 4 6.148 0.43
+lj 3 5 3.24 0.47
+lj 3 6 6.348 0.43
+lj 3 7 2.79 0.47
+lj 3 8 3.5 0.465
+lj 3 9 8.815 0.395
+lj 4 4 3.1 0.41
+lj 4 5 5.929 0.43
+lj 4 6 3.1 0.41
+lj 4 7 2.201 0.473
+lj 4 8 7.09 0.425
+lj 4 9 1.5 0.3765
+lj 5 5 3.24 0.47
+lj 5 6 6.109 0.43
+lj 5 7 2.96 0.47
+lj 5 8 3.5 0.465
+lj 5 9 8.435 0.395
+lj 6 6 2.52 0.41
+lj 6 7 2.464 0.443
+lj 6 8 7.09 0.425
+lj 6 9 1.5 0.3765
+lj 7 7 3.39 0.47
+lj 7 8 2.06 0.47
+lj 7 9 1.35 0.524
+lj 8 8 4.65 0.47
+lj 8 9 11.46 0.385
+lj 9 9 1.18 0.354
+
+# MC / protonation parameters
+nh_n_type            = 5
+nh_p_type            = 6
+w_type               = 8
+cl_type              = 9
+beta                 = 0.40090788
+rng_seed             = 2025
+energy_interval      = 100
+
+# constant-pH control
+offset               = -93.6
+pH                   = 2.0
+pKa_NH               = 7.5
+cph_attempts         = 160000
+rc_move              = 3.0
+
+
+
+
+

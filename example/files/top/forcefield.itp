@@ -1,0 +1,3 @@
+;Change according to the water model (RW, SW or TW) you are going to use
+
+#include "martini_3_mod-RW.itp" 

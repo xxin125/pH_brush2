@@ -1,0 +1,21 @@
+
+#include "top/forcefield.itp"
+#include "top/martini_v3.0.0_ions_v1.itp"
+#include "top/martini_v3.0.0_solvents_v1.itp"
+#include "top/SUB.itp"
+
+; template
+#include "top/POLD_0pct.itp"
+#include "top/POL_template.itp" ; introduce all atom types 
+
+[ system ]
+System
+
+[ molecules ]
+SUB             1
+POL             63
+POL_t           1    
+OCT             3777
+W               141223
+CL              3200
+

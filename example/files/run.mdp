@@ -1,0 +1,65 @@
+
+;---------------------------------------------------------------------------;
+; Run parameters
+integrator               = md
+dt                       = 0.01
+nsteps                   = 100000
+;---------------------------------------------------------------------------;
+; COM motion
+comm-mode                = none	
+;---------------------------------------------------------------------------;
+; Output frequency
+nstxout                  = 0        ; coords (x)
+nstvout                  = 0        ; velocities (v)
+nstfout                  = 0        ; forces (f)
+nstenergy                = 10000    ; energies to log file
+nstlog                   = 10000    ; energies to energy file
+nstxout-compressed       = 100000   ; xtc file
+compressed-x-precision   = 100      ; precision for xtc file
+compressed-x-grps        = 
+;---------------------------------------------------------------------------;
+; Neighbor parameters
+cutoff-scheme            = Verlet
+pbc                      = xy	
+verlet-buffer-tolerance  = 0.005
+;---------------------------------------------------------------------------;
+; Non-bonded parameters
+vdwtype                  = Cut-off
+vdw-modifier             = Potential-shift-verlet
+rvdw                     = 1.1
+coulombtype              = PME
+rcoulomb                 = 1.698 ; by tunepme
+fourier-nx               = 144   ; by tunepme
+fourier-ny               = 144   ; by tunepme
+fourier-nz               = 648   ; by tunepme
+epsilon_r                = 15
+ewald-geometry           = 3dc
+epsilon_surface          = 0
+wall-ewald-zfac          = 3
+;---------------------------------------------------------------------------;
+; Walls
+nwall                    = 2
+wall_type                = 12-6
+wall_atomtype            = C1 C1           
+wall_density             = 3.0 3.0             
+;---------------------------------------------------------------------------;
+; Temperature coupling
+tcoupl                   = berendsen 
+tc-grps			         = !SUB SUB
+tau_t                    = 1.0  1.0
+ref-t                    = 300  300
+;---------------------------------------------------------------------------;
+; Pressure coupling
+pcoupl                   = no
+;---------------------------------------------------------------------------;
+; Velocity generation
+gen_vel                  = no
+gen-temp                 = 300
+gen-seed                 = 173510
+;---------------------------------------------------------------------------;
+; Bonds
+constraints              = none
+constraint-algorithm     = Lincs
+lincs-order              = 4
+lincs-warnangle          = 90
+;---------------------------------------------------------------------------;
